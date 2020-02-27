@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zapremina valjka</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+             }
+        .calculator {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+    background-color: rgb(186, 228, 214);
+        }
+        h2 {
+            margin: 30px;
+        }
+        #dugme {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+ <div class="calculator">
+     <h2>Zapremina Valjka</h2>
+    <form action="javascript:calculateArea()">
+    <div id="inputs">
+        <label for="id_radius">Radius</label>
+        <input type="number" id="id_radius" min="0" step="any">
+        <br><br>
+        <label for="id_height">Height</label>
+        <input type="number" id="id_height" min="0" step="any">
+        <h2><em>V=r<sup>2</sup>* &pi;*H</em></h2>
+    </div>
+    <input type="submit" value="Calculate Area" id="dugme">
+    <p id="id_output"></p>
+
+    </form>
+</div>
+    <script> 
+    function calculateArea(){
+        let radius = document.getElementById("id_radius").value;
+        let height = document.getElementById("id_height").value;
+        area = radius * radius * Math.PI * height;
+        document.getElementById("id_output").innerHTML = "Area =" + area;
+    }
+    </script>
+
+        
+        
+
+    
+
+
+    
+    
+</body>
+</html>
